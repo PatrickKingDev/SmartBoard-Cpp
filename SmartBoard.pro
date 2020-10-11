@@ -20,6 +20,7 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
+    ScaleTextLabel.h \
     mainwindow.h
 
 FORMS += \

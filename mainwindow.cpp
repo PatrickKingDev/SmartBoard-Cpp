@@ -13,6 +13,9 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::adjustSizes(){
+
+}
 
 void MainWindow::on_close_btn_clicked()
 {

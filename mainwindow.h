@@ -14,6 +14,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void adjustSizes();
 
 private slots:
     void on_close_btn_clicked();
