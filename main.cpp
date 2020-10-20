@@ -8,5 +8,6 @@ int main(int argc, char *argv[])
     MainWindow w;
     w.showFullScreen();
     w.show();
+    w.adjustSizes();
     return a.exec();
 }

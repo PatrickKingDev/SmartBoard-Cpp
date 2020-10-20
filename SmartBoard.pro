@@ -20,8 +20,8 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
-    ScaleTextLabel.h \
-    mainwindow.h
+    mainwindow.h \
+    scaletextlabel.h
 
 FORMS += \
     mainwindow.ui
