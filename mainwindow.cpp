@@ -26,6 +26,7 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::adjustSizes(){
+    ui->label_2->setText(QString::number(ui->scrollArea->width()));
     ui->scrollAreaWidgetContents->setMinimumWidth((ui->scrollArea->width()+5)*2);
 }
 
