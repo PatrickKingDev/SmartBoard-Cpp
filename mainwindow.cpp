@@ -1,5 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "motivationallist.h"
+
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -8,6 +11,15 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     //Test Zone
+    QMap<QString, int> *motivationalList = new QMap<QString, int>();
+    motivationalList->insert("KingList", 2);
+    motivationalList->insert("Lecture", 4);
+    motivationalList->insert("Projet Autre", 1);
+    motivationalList->insert("Sport", 1);
+
+    MotivationalList *list = new MotivationalList(this, motivationalList);
+
+    ui->gridMotivationalList->addWidget(list);
 
     //Set Timer
     QTimer * ETTimer = new QTimer(this);
@@ -40,29 +52,8 @@ void MainWindow::updateTimeLabel(){
     ui->lbl_time->setText(text);
 }
 
-void MainWindow::on_pushButton_clicked()
-{
-    setButtonText(ui->pushButton);
-}
-
-void MainWindow::on_pushButton_2_clicked()
-{
-    setButtonText(ui->pushButton_2);
-}
-
-void MainWindow::on_pushButton_3_clicked()
-{
-    setButtonText(ui->pushButton_3);
-}
-
-
-void MainWindow::on_pushButton_4_clicked()
-{
-    setButtonText(ui->pushButton_4);
-}
-
-void MainWindow::setButtonText(QPushButton *button){
-    QStringList textList = button->text().split("/");
-    QString text = QString::number(textList.first().toInt() + 1);
-    button->setText(text + "/" + textList.last());
-}
+//void MainWindow::setButtonText(QPushButton *button){
+//    QStringList textList = button->text().split("/");
+//    QString text = QString::number(textList.first().toInt() + 1);
+//    button->setText(text + "/" + textList.last());
+//}

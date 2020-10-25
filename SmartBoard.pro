@@ -17,10 +17,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    motivationallist.cpp
 
 HEADERS += \
     mainwindow.h \
+    motivationallist.h \
     scaletextlabel.h
 
 FORMS += \
