@@ -23,6 +23,7 @@ SOURCES += \
 HEADERS += \
     mainwindow.h \
     motivationallist.h \
+    motivationallistbutton.h \
     scaletextlabel.h
 
 FORMS += \
